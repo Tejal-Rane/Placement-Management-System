@@ -2,7 +2,6 @@ const mongoose=require('mongoose')
 const router=require('express').Router()
 const User=require('../model/profile')
 
-
 router.post(`/profile`,(req,res)=>{
     console.log(req.body)
     const user=new User(req.body);
@@ -25,6 +24,7 @@ router.get("/get-user/:id",async(req,res)=>{
         console.log(error);
     }
 });
+
 router.get("/all-user/",async(req,res)=>{
     try{
         const alluser=await User.find();

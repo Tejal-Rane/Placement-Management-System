@@ -10,6 +10,7 @@ import Placement from "./Placement";
 import { Createprofile } from "./Createprofile";
 import Viewprofile from "./Viewprofile";
 import Listalluser from "./Listalluser";
+import Viewplacement from "./Viewplacement";
 
 const App=()=> {
   return (
@@ -24,6 +25,7 @@ const App=()=> {
     <Route exact path="/placement" component={Placement}/>
     <Route exact path="/profile" component={Createprofile}/>
     <Route exact path="/vprofile/:id" component={Viewprofile}/>
+    <Route exact path="/vplacement/:id" component={Viewplacement}/>
     <Route exact path="edit-user/vprofile/:id" component={Createprofile}/>
     <Route exact path="/listall" component={Listalluser}/>
     <Redirect to="/"/>
